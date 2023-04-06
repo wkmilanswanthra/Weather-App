@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@color/black2"
+        android:id="@+id/bg_img">
+    </ImageView>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_margin="20dp"
+        android:id="@+id/back_btn"
+        app:tint="@color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_btn"
+        android:text="About"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp"
+        android:id="@id/title"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:text="The app will load the weather conditions for the current city you are living in.
+Weather forecast for the day for every hour will be displayed in the bottom."
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>

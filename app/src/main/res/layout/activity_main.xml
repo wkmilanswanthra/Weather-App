@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black2"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loader"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/home"
+        android:visibility="gone">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@color/black2"
+            android:id="@+id/bg_img">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/about"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_baseline_info_24"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_baseline_help_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/city"
+            android:text="City Name"
+            android:layout_below="@+id/help"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="0dp"
+            android:padding="20dp"
+            android:textSize="20sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/l_layout"
+            android:layout_below="@+id/city"
+            android:weightSum="5" >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/city_input"
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+                android:background="@android:color/transparent"
+                android:hint="Enter city name"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/edt_city"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:background="@android:color/transparent">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:id="@+id/search"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_search_24"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/temp"
+            android:layout_below="@id/l_layout"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="23"
+            android:textColor="@color/white"
+            android:textSize="70sp"/>
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/icon"
+            android:layout_below="@id/temp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/condition"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="condition"
+            android:textColor="@color/white"
+            android:layout_below="@id/icon"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="10dp"
+            android:text="Today's weather forecast"
+            android:textColor="@color/white"
+            android:layout_above="@id/recyclerView"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginBottom="50sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
